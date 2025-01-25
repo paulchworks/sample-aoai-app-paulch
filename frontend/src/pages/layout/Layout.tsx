@@ -20,7 +20,6 @@ const Layout = () => {
   const [logo, setLogo] = useState('')
   const appStateContext = useContext(AppStateContext)
   const ui = appStateContext?.state.frontendSettings?.ui
-
   const handleShareClick = () => {
     window.location.href = window.location.href + '/.auth/logout';
   };
