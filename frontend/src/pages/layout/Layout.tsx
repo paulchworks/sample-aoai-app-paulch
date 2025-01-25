@@ -24,6 +24,17 @@ const Layout = () => {
   const handleShareClick = () => {
     window.location.href = window.location.href + '/.auth/logout';
   };
+  
+  const handleSharePanelDismiss = () => {
+    setIsSharePanelOpen(false);
+    setCopyClicked(false);
+    setCopyText("Copy URL");
+  };
+
+  const handleCopyClick = () => {
+    navigator.clipboard.writeText(window.location.href);
+    setCopyClicked(true);
+  };
 
   const handleHistoryClick = () => {
     appStateContext?.dispatch({ type: 'TOGGLE_CHAT_HISTORY' })
