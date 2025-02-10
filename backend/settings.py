@@ -2,7 +2,7 @@ import os
 import json
 import logging
 from abc import ABC, abstractmethod
-from pydantic import (
+from pydantic import(
     BaseModel,
     confloat,
     conint,
@@ -101,6 +101,7 @@ class _AzureOpenAISettings(BaseSettings):
         env_ignore_empty=True
     )
     
+    #model: str
     model: str
     key: Optional[str] = None
     resource: Optional[str] = None
